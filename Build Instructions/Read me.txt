@@ -1,0 +1,31 @@
+Creating a jar File in Command Prompt
+
+1. Start Command Prompt.
+
+2. Navigate to the folder that holds your class files:
+C:\>cd \Sencore VB-NOMAD QAM Auditor Mini Project\src\sencore\vb\nomad\qam\auditor\mini\project\Sencore_VB_NOMAD_QAM_Auditor.java
+
+3. Set path to include JDK’s bin.  For example:
+C:\mywork> path c:\Program Files\Java\jdk1.7.0_25\bin;%path%
+
+4. Compile your class(es):
+C:\mywork> javac *.java
+
+there are 3 classes 
+----------------------
+Countdown.java
+Highlite_Frequencies.java
+Sencore_VB_NOMAD_QAM_Auditor.java (main class)
+--------------------------------
+
+5. Create a manifest file and your jar file:
+
+C:\mywork> echo Main-Class: Sencore_VB_NOMAD_QAM_Auditor >manifest.txt
+C:\mywork> jar cvfm Sencore_VB_NOMAD_QAM_Auditor.jar manifest.txt *.class
+or
+C:\mywork> jar cvfe Sencore_VB_NOMAD_QAM_Auditor.jar Sencore_VB_NOMAD_QAM_Auditor *.class
+
+6. Test your jar:
+C:\mywork> Sencore_VB_NOMAD_QAM_Auditor.jar
+or
+C:\mywork> java -jar Sencore_VB_NOMAD_QAM_Auditor.jar
